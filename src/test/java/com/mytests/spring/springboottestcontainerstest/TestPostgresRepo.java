@@ -3,6 +3,7 @@ package com.mytests.spring.springboottestcontainerstest;
 import com.mytests.spring.springboottestcontainerstest.data.Person;
 import com.mytests.spring.springboottestcontainerstest.repositories.PersonRepository;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
@@ -29,11 +30,11 @@ public class TestPostgresRepo {
             .withDatabaseName("test")
             .withUsername("sa")
             .withPassword("sa");
-    private final PersonRepository personRepository;
 
-    public TestPostgresRepo(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
+    @Autowired
+    PersonRepository personRepository;
+
+
 
     @DynamicPropertySource
     static void setProperties(DynamicPropertyRegistry registry) {

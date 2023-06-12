@@ -15,7 +15,7 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
 
     @Modifying
     @Query("update Person u set u.status = :status where u.age >= :age")
-    String updateStatus(@Param("status") String s, @Param("age") int age);
+    void updateStatus(@Param("status") String s, @Param("age") int age);
 
     List<Person> getByStatus(String status);
 }
