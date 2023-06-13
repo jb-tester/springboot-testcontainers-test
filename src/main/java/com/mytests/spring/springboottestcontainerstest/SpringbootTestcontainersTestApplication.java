@@ -9,13 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootTestcontainersTestApplication implements CommandLineRunner {
 
-    private final PersonsService personsService;
+   /* private final PersonsService personsService;
     private final TaskService taskService;
 
     public SpringbootTestcontainersTestApplication(PersonsService personsService, TaskService taskService) {
         this.personsService = personsService;
         this.taskService = taskService;
-    }
+    }*/
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootTestcontainersTestApplication.class, args);
@@ -25,7 +25,7 @@ public class SpringbootTestcontainersTestApplication implements CommandLineRunne
     public void run(String... args) throws Exception {
         //personsService.initDB();
         //taskService.initDB();
-        System.out.println("=== all persons: ===");
+        /*System.out.println("=== all persons: ===");
         personsService.displayAll();
         personsService.updateStatus();
         System.out.println("=====================");
@@ -37,6 +37,6 @@ public class SpringbootTestcontainersTestApplication implements CommandLineRunne
         System.out.println("=====================");
         System.out.println("=== old tasks: ===");
         taskService.displayOldTasks();
-        System.out.println("=====================");
+        System.out.println("=====================");*/
     }
 }

@@ -38,6 +38,11 @@ public class TestMongoRepo {
         Task Task2 = new Task(UUID.randomUUID(), "test task2", new Date(2023, Calendar.MAY, 8),"created");
         Task savedTask1 = repository.save(Task1);
         Task savedTask2 = repository.save(Task2);
+        System.out.println("*********** tasks: ******************");
+        for (Task task : repository.findAll()) {
+            System.out.println(task);
+        }
+        System.out.println("*************************************");
         Date deadline = new Date(2023, Calendar.JANUARY,1);
 
         List<Task> Tasks = new ArrayList<>();
