@@ -34,14 +34,6 @@ public class PersonsService {
 
    }
 
-   public void displayAll(){
-      for (Person person : personRepository.findAll()) {
-         System.out.println(person);
-      }
-   }
 
-   public void updateStatus(){
-      personRepository.updateStatus("senior", 60);
-   }
 
 }
