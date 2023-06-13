@@ -21,8 +21,12 @@ public class SpringbootTestcontainersTestApplication implements CommandLineRunne
     @Override
     public void run(String... args) throws Exception {
         personsService.initDB();
+        System.out.println("=== all persons: ===");
         personsService.displayAll();
         personsService.updateStatus();
+        System.out.println("=====================");
+        System.out.println("=== all persons after update: ===");
         personsService.displayAll();
+        System.out.println("=====================");
     }
 }
