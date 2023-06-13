@@ -1,0 +1,26 @@
+###
+POST http://localhost:8080/persons/init
+
+<> 2023-06-13T192304.200.txt
+
+###
+GET http://localhost:8080/tasks/all
+
+<> 2023-06-13T191848.200.json
+
+###
+GET http://localhost:8080/tasks/byState/created
+
+<> 2023-06-13T191914.200.json
+
+###
+GET http://localhost:8080/persons/all
+
+<> 2023-06-13T191303.200.json
+
+###
+PUT http://localhost:8080/persons/update/18/adult
+
+<> 2023-06-13T191345.500.json
+
+###

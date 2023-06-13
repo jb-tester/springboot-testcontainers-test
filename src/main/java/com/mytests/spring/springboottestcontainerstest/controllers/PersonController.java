@@ -29,7 +29,7 @@ public class PersonController {
     }
 
 
-    @PutMapping("/update/{age:[1-9]([0-9]?)}/{status}")
+    @PutMapping("/update/{age:[1-9](?:[0-9])}/{status}")
     public String update(@PathVariable("age") int age, @PathVariable String status) {
         personRepository.updateStatus(status,age);
         return "updated status to "+status+" for persons older than "+age;
